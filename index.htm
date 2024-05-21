@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- nav start  -->
+    <nav class="bg-[#f5f5f5]">
+        <div class="container px-5 2xl:px-40 mx-auto md:px-0">
+            <div id="navbar" class="justify-between items-center py-5 hidden md:flex">
+                <div class="flex items-center">
+                    <div class="flex items-center border-r border-[#999] pr-3">
+                        <p class="text-[14px] font-normal">
+                            <i class="fas fa-envelope mr-2 text-[#252525] text-[12px]"></i>hello@colorlib.com
+                        </p>
+                    </div>
+                    <div class="pl-3">
+                        <p class="text-[14px] font-normal">Free Shipping for all Order of $99</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <ul class="flex items-center border-r border-[#999] pr-3">
+                        <li class="mr-4"><a href="#"><i class="fab fa-facebook-f text-[12px]"></i></a></li>
+                        <li class="mr-4"><a href="#"><i class="fab fa-twitter text-[12px]"></i></a></li>
+                        <li class="mr-4"><a href="#"><i class="fab fa-linkedin-in text-[12px]"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest-p text-[12px]"></i></a></li>
+                    </ul>
+                    <div class="pl-3 flex items-center">
+                        <i class="fas fa-user text-[12px] mr-3"></i>
+                        <a href="#" class="text-[18px] font-medium flex items-center">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end  -->
+
+    <!-- header start  -->
+    <header>
+        <div class="container px-5 2xl:px-40 mx-auto md:px-0">
+            <div class="py-2 md:py-4 flex flex-wrap justify-between items-center">
+                <div>
+                    <a href="index.htm" class="w-[120px] overflow-hidden inline-block" id="logo">
+                        <img class="size-full" src="img/logo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button onclick="ShowSidebar()"
+                        class="text-[1.2em] flex items-center justify-center w-[30px] h-[30px] border border-[#000]">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <ul class="hidden md:flex">
+                    <li><a class="mx-4 text-[14px] font-bold uppercase inline-block text-[#7fad39]" href="#">Home</a>
+                    </li>
+                    <li><a class="mx-4 text-[14px] font-bold text-[#252525] uppercase inline-block hover:text-[#7fad39] duration-[.3s]"
+                            href="#">Shop</a></li>
+                    <li><a class="mx-4 text-[14px] font-bold text-[#252525] uppercase inline-block hover:text-[#7fad39] duration-[.3s]"
+                            href="#">Pages</a></li>
+                    <li><a class="mx-4 text-[14px] font-bold text-[#252525] uppercase inline-block hover:text-[#7fad39] duration-[.3s]"
+                            href="#">Blog</a></li>
+                    <li><a class="mx-4 text-[14px] font-bold text-[#252525] uppercase inline-block hover:text-[#7fad39] duration-[.3s]"
+                            href="#">Contact</a></li>
+                </ul>
+                <div class="hidden md:flex">
+                    <p class="text-[16px] font-normal">item:<span class="font-medium pl-2">$150.00</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end  -->
+
+    <!-- sidebar start  -->
+    <div id="sidebar"
+        class="absolute z-[900] duration-[.4s] md:hidden translate-x-[-100%] left-0 top-0 overflow-x-auto bottom-0 w-[65%] border-r-[5px] bg-white border-[#7FAD39]">
+        <div class="p-[20px] relative">
+            <div class="text-right">
+                <button onclick="ShowSidebar()" class="text-[1.2em] p-3">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div>
+                <a href="index.htm" class="w-[120px] inline-block">
+                    <img class="size-full" src="img/logo.png" alt="Logo" />
+                </a>
+            </div>
+            <button
+                class="flex items-center bg-[#7fad39] mt-2 hover:bg-[#7ead39d6] hover:shadow-md duration-[.4s] text-white px-5 py-3 rounded-[10px]">
+                <i class="fas fa-user text-[14px] mr-1"></i>
+                <a href="#" class="text-[18px] font-medium flex items-center">Login</a>
+            </button>
+            <ul class="mt-5">
+                <li class="text-[#1c1c1c] hover:text-[#7fad39] duration-[.3s] text-[16px] font-semibold py-2 border-b ">
+                    <a href="#">Home</a>
+                </li>
+                <li class="text-[#1c1c1c] hover:text-[#7fad39] duration-[.3s] text-[16px] font-semibold py-2 border-b ">
+                    <a href="#">Shop</a>
+                </li>
+                <li class="text-[#1c1c1c] hover:text-[#7fad39] duration-[.3s] text-[16px] font-semibold py-2 border-b ">
+                    <a href="#">Pages</a>
+                </li>
+                <li class="text-[#1c1c1c] hover:text-[#7fad39] duration-[.3s] text-[16px] font-semibold py-2 border-b ">
+                    <a href="#">Blog</a>
+                </li>
+                <li class="text-[#1c1c1c] hover:text-[#7fad39] duration-[.3s] text-[16px] font-semibold py-2 border-b ">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <ul class="flex items-center mt-10">
+                <li class="mr-4"><a href="#"><i class="fab fa-facebook-f text-[14px]"></i></a></li>
+                <li class="mr-4"><a href="#"><i class="fab fa-twitter text-[14px]"></i></a></li>
+                <li class="mr-4"><a href="#"><i class="fab fa-linkedin-in text-[14px]"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest-p text-[14px]"></i></a></li>
+            </ul>
+            <div class="flex items-center mt-10">
+                <p class="text-[14px] font-normal">
+                    <i class="fas fa-envelope mr-1 text-[#252525] text-[12px]"></i>hello@colorlib.com
+                </p>
+            </div>
+            <div class="mt-3">
+                <p class="text-[14px] font-normal">Free Shipping for all Order of $99</p>
+            </div>
+        </div>
+    </div>
+    <!-- sidebar end  -->
+
+    <!-- main start  -->
+    <main>
+        <div class="container px-5 2xl:px-40 mx-auto md:px-0">
+            <section class="py-[30px]">
+                <div class="flex flex-wrap">
+                    <div class="size-full mb-6 lg:size-3/12 pr-2">
+                        <div>
+                            <h2 class="text-center bg-[#7fad39] text-white py-[10px] text-[18px] font-bold">All
+                                departments</h2>
+                            <ul class="border py-3 px-7 border-[#eee]" id="all-departaments"></ul>
+                        </div>
+                    </div>
+                    <div class="size-full mb-6 lg:size-9/12 pl-2">
+                        <div class="flex flex-wrap">
+                            <div class="size-full mb-6 md:size-8/12 pr-3">
+                                <div class="input-groups relative border py-3 px-3 lg:flex">
+                                    <select class="hidden pr-4 border-r lg:block outline-none" id="all-category">
+                                        <option value="">All Categories</option>
+                                    </select>
+                                    <input value="" class="block size-full outline-none px-4 text-[#b2b2b2] text-[16px]"
+                                        type="text" placeholder="What do you need?" id="search-input" />
+                                    <a href="#important-products" onclick="SearchProduct()"
+                                        class="bg-[#7fad39] uppercase font-bold text-white absolute top-0 bottom-0 right-0 py-3 px-5">Search</a>
+                                </div>
+                            </div>
+                            <div class="size-full mb-6 md:size-4/12 pl-3">
+                                <div class="flex items-center lg:justify-end">
+                                    <div
+                                        class="mr-3 h-[50px] w-[50px] flex items-center justify-center rounded-full bg-[#eee] text-[#7fad39]">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-[18px] text-[#1c1c1c]">+65 11.188.888</p>
+                                        <p class="text-[14px] text-[#6f6f6f] font-normal pl-1">support 24/7 time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="hero-section" class="h-[431px] flex flex-col pl-5 sm:pl-20 justify-center ">
+                            <h5 class="text-[#7fad39] text-[14px] font-bold mb-2">FRUIT FRESH</h5>
+                            <h1 class="text-[46px] font-bold text-[#252525] leading-[1.3em] mb-2">Vegetable <br> 100%
+                                Organic</h1>
+                            <p class="text-[16px] text-[#6f6f6f] font-normal mb-4">Free Pickup and Delivery Available
+                            </p>
+                            <button
+                                class="self-start bg-[#7fad39] px-7 py-3 font-bold text-[16px] uppercase text-white">shop
+                                now</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-[50px]">
+                <div id="slider">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper pl-12 py-8">
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px] md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/meyve.jpg" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">Meyvə</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px]  md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/terevez.jpg" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">Tərəvəz</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px]  md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/Alkaqol.png" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">Alkaqollu içkilər</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px]  md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/alkaqolsuz.jpg" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">Soyuq içkilər</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px]  md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/isti ickiler.jpg" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">İsti içkilər</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide pr-10">
+                                <div class="border py-2 rounded-md shadow-md sm:w-[350px] w-[250px]  md:w-[280px] lg:w-[200px] xl:w-[auto]">
+                                    <div>
+                                        <img class="w-[188px] mx-auto" src="img/sac.png" />
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="font-bold text-[20px] mb-2">Saç şampuanları</p>
+                                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-6 py-3 rounded-md">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next text-[#000]"></div>
+                        <div class="swiper-button-prev text-[#000]"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="important-products" class="py-[50px]">
+                <div class="mb-10">
+                    <h2 class="text-center mb-1 font-bold text-[36px]">Featured Product</h2>
+                    <hr class="bg-[#7fad39] w-[100px] mx-auto h-[5px]" />
+                </div>
+                <div id="category-btns" class="text-center mb-5">
+                    <button onclick="GetSearch(0)" class="mr-3 search-btns mb-2">All</button>
+                </div>
+                <div id="card-container" class="flex flex-wrap"></div>
+            </section>
+            <section class="pb-[100px]">
+                <div class="flex flex-wrap">
+                    <div class="size-full md:size-6/12 md:pr-3 mb-5">
+                        <div>
+                            <img class="w-full" src="img/banner-1.jpg" />
+                        </div>
+                    </div>
+                    <div class="size-full md:size-6/12 md:pl-3 mb-5">
+                        <div>
+                            <img class="w-full" src="img/banner-2.jpg" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pb-[50px]">
+                <div class="mb-10">
+                    <h2 class="text-center mb-1 font-bold text-[36px]">From The Blog</h2>
+                    <hr class="bg-[#7fad39] w-[100px] mx-auto h-[5px]" />
+                </div>
+                <div class="flex flex-wrap">
+                    <div class="size-full md:size-4/12 md:pr-3 mb-5">
+                        <div>
+                            <div class="mb-5 h-[310px] overflow-hidden">
+                                <img class="w-full h-full" src="img/blog-1.jpg" />
+                            </div>
+                            <div>
+                                <div class="flex mb-3">
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-calendar"></i> May 4,2024</p>
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-comment"></i> 5</p>
+                                </div>
+                                <h2 class="text-[20px] mb-3 font-bold">Cooking tips make cooking simple</h2>
+                                <p class="text-[#6f6f6f] font-normal text-[16px]">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-full md:size-4/12 md:px-3 mb-5">
+                        <div>
+                            <div class="mb-5 h-[310px] overflow-hidden">
+                                <img class="w-full h-full" src="img/blog-2.jpg" />
+                            </div>
+                            <div>
+                                <div class="flex mb-3">
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-calendar"></i> May 4,2024</p>
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-comment"></i> 5</p>
+                                </div>
+                                <h2 class="text-[20px] mb-3 font-bold">6 ways to prepare breakfast for 30</h2>
+                                <p class="text-[#6f6f6f] font-normal text-[16px]">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="size-full md:size-4/12 md:pl-3 mb-5">
+                        <div>
+                            <div class="mb-5 h-[310px] overflow-hidden">
+                                <img class="w-full h-full" src="img/blog-3.jpg" />
+                            </div>
+                            <div>
+                                <div class="flex mb-3">
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-calendar"></i> May 4,2024</p>
+                                    <p class="mr-3 text-[#b2b2b2] text-[16px] font-normal"><i class="far fa-comment"></i> 5</p>
+                                </div>
+                                <h2 class="text-[20px] mb-3 font-bold">Visit the clean farm in the US</h2>
+                                <p class="text-[#6f6f6f] font-normal text-[16px]">Sed quia non numquam modi tempora indunt ut labore et dolore magnam aliquam quaerat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- main end  -->
+
+    <!-- footer start  -->
+    <footer class="bg-[#F3F6FA] pt-[100px]">
+        <div class="container px-5 2xl:px-40 mx-auto md:px-0">
+            <div class="flex flex-wrap">
+                <div class="size-full mb-5 md:size-6/12 lg:size-4/12 md:pr-2">
+                    <div>
+                        <div class="w-[120px] mb-2">
+                            <img class="w-full" src="img/logo.png" alt="Logo" />
+                        </div>
+                        <ul>
+                            <li class="text-[16px] text-[#1c1c1c] font-normal mb-2">Address: 60-49 Road 11378 New York</li>
+                            <li class="text-[16px] text-[#1c1c1c] font-normal mb-2">Phone: +65 11.188.888</li>
+                            <li class="text-[16px] text-[#1c1c1c] font-normal mb-2">Email: hello@colorlib.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="size-full mb-5 md:size-6/12 lg:size-4/12 md:px-2">
+                    <div>
+                        <div>
+                            <h2 class="font-bold text-[#1c1c1c] mb-2 text-[16px]">Useful Links</h2>
+                            <div class="flex">
+                                <ul class="text-[14px] mr-20 text-[#1c1c1c] font-normal">
+                                    <li class="mb-2">About Us</li>
+                                    <li class="mb-2">About Our Shop</li>
+                                    <li class="mb-2">Secure Shopping</li>
+                                    <li class="mb-2">Delivery infomation</li>
+                                    <li class="mb-2">Privacy Policy</li>
+                                    <li class="mb-2">Our Sitemap</li>
+                                </ul>
+                                <ul class="text-[14px] text-[#1c1c1c] font-normal">
+                                    <li class="mb-2">Who We Are</li>
+                                    <li class="mb-2">Our Services</li>
+                                    <li class="mb-2">Projects</li>
+                                    <li class="mb-2">Contact</li>
+                                    <li class="mb-2">Innovation</li>
+                                    <li class="mb-2">Testimonials</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="size-full mb-5 lg:size-4/12 lg:pl-2">
+                    <div>
+                        <div class="mb-2">
+                            <h2 class="font-bold text-[#1c1c1c] mb-2 text-[16px]">Join Our Newsletter Now</h2>
+                        </div>
+                        <p class="text-[14px] text-[#1c1c1c] mb-8 font-normal">Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#" class="relative mb-6 py-3 bg-white">
+                            <input class="block w-full outline-none pl-5" placeholder="Enter your email" type="email" required />
+                            <button class="px-5 py-3 font-bold text-[16px] text-white bg-[#7fad39] absolute top-0 bottom-0 right-0">Subscribe</button>
+                        </form>
+                        <div class="flex">
+                            <span class="flex h-[40px] w-[40px] items-center justify-center mr-4 bg-white text-[#1c1c1c] rounded-full text-[1em]"><i class="fab fa-facebook-f"></i></span>
+                            <span class="flex h-[40px] w-[40px] items-center justify-center mr-4 bg-white text-[#1c1c1c] rounded-full text-[1em]"><i class="fab fa-instagram"></i></span>
+                            <span class="flex h-[40px] w-[40px] items-center justify-center mr-4 bg-white text-[#1c1c1c] rounded-full text-[1em]"><i class="fab fa-twitter"></i></span>
+                            <span class="flex h-[40px] w-[40px] items-center justify-center mr-4 bg-white text-[#1c1c1c] rounded-full text-[1em]"><i class="fab fa-linkedin-in"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t py-8">
+                <div class="lg:flex lg:justify-between">
+                    <div class="mb-5 lg:mb-0">
+                        <p>Copyright ©2024 All rights reserved | This template is made with by Colorlib</p>
+                    </div>
+                    <div>
+                        <img class="w-[290px]" src="img/payment-item.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end  -->
+
+    <div id="basket-content"  class="fixed z-[-1] opacity-0 inset-0 duration-[.2s] bg-[#00000080]">
+        <div class="absolute left-[20px] right-[20px] md:left-[40px] md:right-[40px] lg:left-[50%] lg:translate-x-[-50%] top-[10vh] border-[5px] rounded-xl bg-white bottom-[10vh] border-[#7FAD39]">
+            <div class="relative py-5 px-4">
+                <div class="text-right px-10">
+                    <button onclick="ShowBasket()" class="fas fa-times text-[1.5em] p-2"></button>
+                </div>
+                <div>
+                    <ul id="sebetlog" class="py-5 overflow-auto h-[60vh]"></ul>
+                </div>
+            </div>
+            <div class="fixed bg-[#eee] bottom-0 right-0 left-0">
+                <div id="Confirm-btn">
+                    <div class="px-5 py-2 flex justify-end items-center">
+                        <p id="Confirm-cont" class="mr-3 font-bold text-[red] text-[20px]"></p>
+                        <button class="bg-[#7fad39] text-white font-bold text-[16px] px-5 py-3 rounded-md">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="basket" onclick="ShowBasket()"
+        class="w-[50px] z-[800] cursor-pointer h-[50px] text-[1.2em] flex items-center justify-center bg-[#7FAD39] rounded-full text-white fixed right-[20px] bottom-[20px]">
+        <div class="relative">
+            <i class="fas fa-shopping-basket"></i>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="swiper.js"></script>
+</body>
+
+</html>

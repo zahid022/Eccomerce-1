@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            margin: auto;
+            height: 500px;
+        }
+        td{
+            padding: 10px;
+            border: 1px solid #333;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table></table>
+
+    <script>
+        const table = document.querySelector('table')
+        let kod = ''
+
+        for (let i = 0; i < 4; i++) {
+            kod += `<tr>`
+                for (let j = 0; j < 4; j++) {
+                    kod += `<td>${i}</td>`
+                }
+            kod += `</tr>`
+        }
+        table.innerHTML = kod
+    </script>
+</body>
+</html>
